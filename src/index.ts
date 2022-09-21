@@ -53,9 +53,9 @@ formatsPlugin.get = (name: FormatName, mode: FormatMode = "full"): Format => {
 
 function addFormats(ajv: Ajv, list: FormatName[], fs: DefinedFormats, exportName: Name): void {
   if (ajv.opts.code.esm) {
-    ajv.opts.code.formats ??= _`(await import("ajv-formats/dist/formats.js"))['${exportName}']`
+    ajv.opts.code.formats ??= _`(await import("@sethvincent/ajv-formats/dist/formats.js"))['${exportName}']`
   } else {
-    ajv.opts.code.formats ??= _`require("ajv-formats/dist/formats").${exportName}`
+    ajv.opts.code.formats ??= _`require("@sethvincent/ajv-formats/dist/formats").${exportName}`
   }
 
   for (const f of list) ajv.addFormat(f, fs[f])
