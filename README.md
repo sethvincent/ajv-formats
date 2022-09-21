@@ -1,5 +1,7 @@
 # ajv-formats
 
+> This is a fork of ajv-formats that includes changes to respect the ajv `code.esm` option to generate standalone validator functions: https://github.com/ajv-validator/ajv-formats/pull/73
+
 JSON Schema formats for Ajv
 
 [![Build Status](https://travis-ci.org/ajv-validator/ajv-formats.svg?branch=master)](https://travis-ci.org/ajv-validator/ajv-formats)
